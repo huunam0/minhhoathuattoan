@@ -42,7 +42,7 @@ Blockly.JavaScript.variables_set = function() {
 };
 
 Blockly.JavaScript.variables_input_value = function() {
-  // Variable Enter.
+  // Variable Enter . thnam#20130825
   var varName = Blockly.JavaScript.variableDB_.getName(
       this.getTitleValue('VAR'), Blockly.Variables.NAME_TYPE);
   return varName + ' = window.parseInt(window.prompt("'+Blockly.LANG_VARIABLES_INPUT_VALUE_TOOLTIP+' '+varName+'"));\n';
