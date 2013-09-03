@@ -66,7 +66,18 @@ Blockly.JavaScript.lists_repeat = function() {
       '(' + argument0 + ', ' + argument1 + ')';
   return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
-
+//begin thnam#20130902 code for Nhap day so
+Blockly.JavaScript.lists_input_n = function() {
+  // Create a list by enter values
+  
+  var argument0 = Blockly.JavaScript.valueToCode(this, 'VALUE',
+      Blockly.JavaScript.ORDER_MEMBER) || '[]';
+  var argument1 = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_COMMA) || '1';
+  var code = "DAY\n";
+  return code;
+};
+//end thnam#20130902
 Blockly.JavaScript.lists_length = function() {
   // List length.
   var argument0 = Blockly.JavaScript.valueToCode(this, 'VALUE',

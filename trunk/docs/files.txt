@@ -1,0 +1,7 @@
+1. Định nghĩa mảnh Nhập biến:
+- Định nghĩa: \language\common\variables.js
+- Sinh mã: \generators\javascript\variables.js
+- Khai báo: \core\variables.js
+
+2. Định nghĩa mảnh: Nhập dãy số
+\language\common\lists.js

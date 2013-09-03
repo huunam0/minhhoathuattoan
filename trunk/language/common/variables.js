@@ -89,7 +89,7 @@ Blockly.Language.variables_set = {
 };
 
 Blockly.Language.variables_input_value = {
-  // Variable setter.
+  // Variable inputed from keyboard. thnam#20130825
   category: null,  // Variables are handled specially.
   helpUrl: Blockly.LANG_VARIABLES_SET_HELPURL,
   init: function() {

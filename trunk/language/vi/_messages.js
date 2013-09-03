@@ -379,6 +379,11 @@ Blockly.LANG_LISTS_REPEAT_INPUT_REPEATED = 'lặp lại';
 Blockly.LANG_LISTS_REPEAT_INPUT_TIMES = 'lần';
 Blockly.LANG_LISTS_REPEAT_TOOLTIP = 'Tạo danh sách gồm một số lượng vật nhất định\n' +
     'với mỗi vật đều giống nhau.';
+//thnam
+Blockly.LANG_LISTS_INPUT_N_ENTER = 'Nhập dãy số';
+Blockly.LANG_LISTS_INPUT_N_INCLUDE = 'gồm';
+Blockly.LANG_LISTS_INPUT_N_ELEMENT = 'phần tử';
+Blockly.LANG_LISTS_INPUT_N_TOOLTIP = 'Nhập một dãy số';
 
 Blockly.LANG_LISTS_LENGTH_HELPURL = 'http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF90CourseNotesnode91.html';
 Blockly.LANG_LISTS_LENGTH_INPUT_LENGTH = 'độ dài của';

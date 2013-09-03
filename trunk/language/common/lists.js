@@ -169,7 +169,25 @@ Blockly.Language.lists_repeat = {
     this.setTooltip(Blockly.LANG_LISTS_REPEAT_TOOLTIP);
   }
 };
-
+Blockly.Language.lists_input_n = {
+  // Create a list with n elements entered. thnam#20130902
+  helpUrl: Blockly.LANG_LISTS_REPEAT_HELPURL,
+  init: function() {
+    this.setColour(260);
+    //this.setOutput(true, 'Array');
+    this.appendDummyInput()
+        .appendTitle(Blockly.LANG_LISTS_INPUT_N_ENTER);
+    this.appendValueInput('VALUE')
+        .setCheck('Array')
+        .appendTitle(Blockly.LANG_LISTS_INPUT_N_INCLUDE);
+    this.appendValueInput('NUM')
+        .setCheck('Number');
+    this.appendDummyInput()
+		.appendTitle(Blockly.LANG_LISTS_INPUT_N_ELEMENT);
+    this.setInputsInline(true);
+    this.setTooltip(Blockly.LANG_LISTS_INPUT_N_TOOLTIP);
+  }
+};
 Blockly.Language.lists_length = {
   // List length.
   helpUrl: Blockly.LANG_LISTS_LENGTH_HELPURL,
