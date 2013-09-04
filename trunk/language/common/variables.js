@@ -116,3 +116,33 @@ Blockly.Language.variables_input_value = {
   contextMenuType_: 'variables_get',
   customContextMenu: Blockly.Language.variables_get.customContextMenu
 };
+//BEGIN thnam#20130904 Print Variable value . 
+Blockly.Language.variables_output_value = {
+  
+  category: null,  // Variables are handled specially.
+  helpUrl: Blockly.LANG_VARIABLES_SET_HELPURL,
+  init: function() {
+    this.setColour(330);
+    this.appendDummyInput()
+        .appendTitle(Blockly.LANG_VARIABLES_OUTPUT_VALUE_TITLE)
+        .appendTitle(new Blockly.FieldVariable(
+        Blockly.LANG_VARIABLES_SET_ITEM), 'VAR');
+        //.appendTitle(Blockly.LANG_VARIABLES_SET_TAIL)
+	//this.setOutput(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip(Blockly.LANG_VARIABLES_OUTPUT_VALUE_TOOLTIP);
+  },
+  getVars: function() {
+    return [this.getTitleValue('VAR')];
+  },
+  renameVar: function(oldName, newName) {
+    if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+      this.setTitleValue(newName, 'VAR');
+    }
+  },
+  contextMenuMsg_: Blockly.LANG_VARIABLES_SET_CREATE_GET,
+  contextMenuType_: 'variables_get',
+  customContextMenu: Blockly.Language.variables_get.customContextMenu
+};
+//END thnam#20130904

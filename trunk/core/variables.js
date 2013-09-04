@@ -99,10 +99,16 @@ Blockly.Variables.renameVariable = function(oldName, newName) {
  */
 Blockly.Variables.flyoutCategory = function(blocks, gaps, margin, workspace) {
 //begin thnam#20130825 Declare block variables_input_value
-  var inputVBlock = Blockly.Language.variables_input_value ? new Blockly.Block(workspace, 'variables_input_value') : null;
+	var inputVBlock = Blockly.Language.variables_input_value ? new Blockly.Block(workspace, 'variables_input_value') : null;
 	inputVBlock && inputVBlock.initSvg();
 	inputVBlock && blocks.push(inputVBlock);
+	gaps.push(margin);
 //end thnam#20130825
+//begin thnam#20130904 Declare block variables_output_value
+	var outputVBlock = Blockly.Language.variables_output_value ? new Blockly.Block(workspace, 'variables_output_value') : null;
+	outputVBlock && outputVBlock.initSvg();
+	outputVBlock && blocks.push(outputVBlock);
+//end thnam#20130904
   var variableList = Blockly.Variables.allVariables();
   variableList.sort(goog.string.caseInsensitiveCompare);
   // In addition to the user's variables, we also want to display the default
