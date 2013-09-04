@@ -70,11 +70,11 @@ Blockly.JavaScript.lists_repeat = function() {
 Blockly.JavaScript.lists_input_n = function() {
   // Create a list by enter values
   
-  var argument0 = Blockly.JavaScript.valueToCode(this, 'VALUE',
-      Blockly.JavaScript.ORDER_MEMBER) || '[]';
-  var argument1 = Blockly.JavaScript.valueToCode(this, 'NUM',
-      Blockly.JavaScript.ORDER_COMMA) || '1';
-  var code = "DAY\n";
+  var argument0 = Blockly.JavaScript.valueToCode(this, 'LIST',Blockly.JavaScript.ORDER_COMMA) || '[]';
+  var argument1 = Blockly.JavaScript.valueToCode(this, 'NUM',Blockly.JavaScript.ORDER_COMMA) || '1';
+  var code = argument0+"=[0];\n";
+  code += "for (var _li=1;_li<="+argument1+";_li++)\n\t "+argument0+".push(window.parseInt(window.prompt('Nhap phan tu thu "+argument0+"["+_li+"]')));\n";
+  //window.parseInt(window.prompt('"+Blockly.LANG_VARIABLES_INPUT_VALUE_TOOLTIP+' '+argument0+"["+_li+"]))
   return code;
 };
 //end thnam#20130902
@@ -204,7 +204,17 @@ Blockly.JavaScript.lists_getIndex = function() {
   }
   throw 'Unhandled combination (lists_getIndex).';
 };
-
+//BEGIN thnam#20130904 implement code for A[i]
+Blockly.JavaScript.lists_getElement = function() {
+  // Get element at index.
+  var at = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_UNARY_NEGATION) || '1';
+  var list = Blockly.JavaScript.valueToCode(this, 'LIST',
+      Blockly.JavaScript.ORDER_MEMBER) || '[]';
+  var code = list + '[' + at + ']';
+  return [code, Blockly.JavaScript.ORDER_MEMBER];
+};
+//END thnam#20130904 
 Blockly.JavaScript.lists_setIndex = function() {
   // Set element at index.
   // Note: Until February 2013 this block did not have MODE or WHERE inputs.
