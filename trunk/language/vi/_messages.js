@@ -411,7 +411,8 @@ Blockly.LANG_LISTS_GET_INDEX_FIRST = 'đầu tiên';
 Blockly.LANG_LISTS_GET_INDEX_LAST = 'cuối cùng';
 Blockly.LANG_LISTS_GET_INDEX_RANDOM = 'bất kỳ';
 Blockly.LANG_LISTS_GET_INDEX_INPUT_IN_LIST = 'trong danh sách';
-Blockly.LANG_LISTS_GET_INDEX_TOOLTIP_GET_FROM_START = 'Hoàn trả thành tố trong danh sách ở vị trí ấn định.\n' +
+Blockly.LANG_LISTS_GET_INDEX_TOOLTIP = 'Lấy phần tử thứ i của dãy số.\n';
+Blockly.LANG_LISTS_GET_INDEX_TOOLTIP_GET_FROM_START = 'Lấy phần tử thứ i của dãy số.\n' +
     'Số 1 là thành tố đầu tiên.';
 Blockly.LANG_LISTS_GET_INDEX_TOOLTIP_GET_FROM_END = 'Hoàn trả thành tố trong danh sách ở vị trí ấn định.\n' +
     'Số 1 là thành tố cuối cùng.';
