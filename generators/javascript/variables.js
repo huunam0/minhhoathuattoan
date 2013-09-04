@@ -45,5 +45,12 @@ Blockly.JavaScript.variables_input_value = function() {
   // Variable Enter . thnam#20130825
   var varName = Blockly.JavaScript.variableDB_.getName(
       this.getTitleValue('VAR'), Blockly.Variables.NAME_TYPE);
-  return varName + ' = window.parseInt(window.prompt("'+Blockly.LANG_VARIABLES_INPUT_VALUE_TOOLTIP+' '+varName+'"));\n';
+  return varName + ' = window.parseInt(window.prompt("'+Blockly.LANG_VARIABLES_INPUT_VALUE_TOOLTIP+varName+'"));\n';
 };
+//BEGIN thnam#20130904 Print value of variable
+Blockly.JavaScript.variables_output_value = function() {
+  var varName = Blockly.JavaScript.variableDB_.getName(
+      this.getTitleValue('VAR'), Blockly.Variables.NAME_TYPE);
+  return 'window.alert("'+Blockly.LANG_VARIABLES_OUTPUT_VALUE_MSG+varName+': "+'+varName+');\n';
+};
+//END thnam#20130904

@@ -475,8 +475,12 @@ Blockly.LANG_VARIABLES_SET_TAIL = null;
 Blockly.LANG_VARIABLES_SET_TOOLTIP = 'Đặt giá trị của biến này thành...';
 Blockly.LANG_VARIABLES_SET_CREATE_GET = 'Tạo mảnh "lấy %1"';
 
-Blockly.LANG_VARIABLES_INPUT_VALUE_TOOLTIP='Nhập giá trị cho biến';
+Blockly.LANG_VARIABLES_INPUT_VALUE_TOOLTIP='Nhập giá trị cho biến ';
 Blockly.LANG_VARIABLES_INPUT_VALUE_TITLE = 'Nhập';
+
+Blockly.LANG_VARIABLES_OUTPUT_VALUE_TOOLTIP='Thông báo giá trị của biến';
+Blockly.LANG_VARIABLES_OUTPUT_VALUE_TITLE = 'Xuất';
+Blockly.LANG_VARIABLES_OUTPUT_VALUE_MSG = 'Giá trị của biến ';
 // Procedures Blocks.
 Blockly.LANG_PROCEDURES_DEFNORETURN_HELPURL = 'http://en.wikipedia.org/wiki/Procedure_%28computer_science%29';
 Blockly.LANG_PROCEDURES_DEFNORETURN_TITLE = '';
