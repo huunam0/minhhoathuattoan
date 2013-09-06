@@ -385,6 +385,10 @@ Blockly.LANG_LISTS_INPUT_N_INCLUDE = 'gồm';
 Blockly.LANG_LISTS_INPUT_N_ELEMENT = 'phần tử';
 Blockly.LANG_LISTS_INPUT_N_TOOLTIP = 'Nhập một dãy số';
 
+
+Blockly.LANG_LISTS_OUTPUT_N = 'Xuất dãy số';
+Blockly.LANG_LISTS_OUTPUT_N_TOOLTIP = 'Xuất giá trị một dãy số';
+
 Blockly.LANG_LISTS_LENGTH_HELPURL = 'http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF90CourseNotesnode91.html';
 Blockly.LANG_LISTS_LENGTH_INPUT_LENGTH = 'độ dài của';
 Blockly.LANG_LISTS_LENGTH_TOOLTIP = 'Hoàn trả độ dài của một danh sách.';

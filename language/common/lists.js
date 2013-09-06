@@ -188,6 +188,20 @@ Blockly.Language.lists_input_n = {
     this.setTooltip(Blockly.LANG_LISTS_INPUT_N_TOOLTIP);
   }
 };
+//BEGIN thnam#20130904 make block print Array
+Blockly.Language.lists_output_n = {
+  helpUrl: Blockly.LANG_LISTS_REPEAT_HELPURL,
+  init: function() {
+    this.setColour(260);
+	this.appendValueInput('LIST')
+        .setCheck('Array')
+        .appendTitle(Blockly.LANG_LISTS_OUTPUT_N);
+	this.setPreviousStatement(true);
+	this.setNextStatement(true);
+    this.setTooltip(Blockly.LANG_LISTS_OUTPUT_N_TOOLTIP);
+  }
+};
+//END thnam#20130904
 Blockly.Language.lists_length = {
   // List length.
   helpUrl: Blockly.LANG_LISTS_LENGTH_HELPURL,

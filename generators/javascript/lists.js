@@ -73,11 +73,18 @@ Blockly.JavaScript.lists_input_n = function() {
   var argument0 = Blockly.JavaScript.valueToCode(this, 'LIST',Blockly.JavaScript.ORDER_COMMA) || '[]';
   var argument1 = Blockly.JavaScript.valueToCode(this, 'NUM',Blockly.JavaScript.ORDER_COMMA) || '1';
   var code = argument0+"=[0];\n";
-  code += "for (var _li=1;_li<="+argument1+";_li++)\n\t "+argument0+".push(window.parseInt(window.prompt('Nhap phan tu thu "+argument0+"["+_li+"]')));\n";
+  code += "for (var _li=1;_li<="+argument1+";_li++)\n\t "+argument0+".push(window.parseInt(window.prompt('Nhap phan tu "+argument0+"['+_li+']')));\n";
   //window.parseInt(window.prompt('"+Blockly.LANG_VARIABLES_INPUT_VALUE_TOOLTIP+' '+argument0+"["+_li+"]))
   return code;
 };
 //end thnam#20130902
+//begin thnam#20130904 code for Xuat day so
+Blockly.JavaScript.lists_output_n = function() {
+  var argument0 = Blockly.JavaScript.valueToCode(this, 'LIST',Blockly.JavaScript.ORDER_COMMA) || '[]';
+  var code = "window.alert("+argument0+".join(', ').substr(3));\n";
+  return code;
+};
+//end thnam#20130904
 Blockly.JavaScript.lists_length = function() {
   // List length.
   var argument0 = Blockly.JavaScript.valueToCode(this, 'VALUE',
