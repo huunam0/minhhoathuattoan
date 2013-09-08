@@ -222,6 +222,20 @@ Blockly.JavaScript.lists_getElement = function() {
   return [code, Blockly.JavaScript.ORDER_MEMBER];
 };
 //END thnam#20130904 
+//BEGIN thnam#20130908 implement code for A[i]=x
+Blockly.JavaScript.lists_setElement = function() {
+  // Set element at index i.
+  var at = Blockly.JavaScript.valueToCode(this, 'NUM',
+      Blockly.JavaScript.ORDER_UNARY_NEGATION) || '1';
+  var vto = Blockly.JavaScript.valueToCode(this, 'TO',
+      Blockly.JavaScript.ORDER_UNARY_NEGATION) || '0';
+
+  var list = Blockly.JavaScript.valueToCode(this, 'LIST',
+      Blockly.JavaScript.ORDER_MEMBER) || '[]';
+  var code = list + '[' + at + ']='+vto;
+  return code;
+};
+//END thnam#20130908 
 Blockly.JavaScript.lists_setIndex = function() {
   // Set element at index.
   // Note: Until February 2013 this block did not have MODE or WHERE inputs.

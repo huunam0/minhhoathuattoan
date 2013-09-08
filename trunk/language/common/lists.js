@@ -439,7 +439,27 @@ Blockly.Language.lists_setIndex.MODE =
      [Blockly.LANG_LISTS_SET_INDEX_INSERT, 'INSERT']];
 
 Blockly.Language.lists_setIndex.WHERE = Blockly.Language.lists_getIndex.WHERE;
-
+//BEGIN thnam#20130908 Thay the manh setIndex
+Blockly.Language.lists_setElement = {
+  // Set A[i]=5 .
+  helpUrl: Blockly.LANG_LISTS_SET_INDEX_HELPURL,
+  init: function() {
+    this.setColour(260);
+    this.appendValueInput('LIST')
+        .setCheck('Array')
+        .appendTitle(Blockly.LANG_LISTS_SET_ELEMENT_INPUT_IN_LIST);
+    this.appendValueInput('NUM')
+		.setCheck('Number')
+        .appendTitle('[');
+    this.appendValueInput('TO')
+        .appendTitle('] =');
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip(Blockly.LANG_LISTS_SET_INDEX_TOOLTIP);
+  }
+};
+//END thnam#20130908
 Blockly.Language.lists_getSublist = {
   // Get sublist.
   helpUrl: Blockly.LANG_LISTS_GET_SUBLIST_HELPURL,

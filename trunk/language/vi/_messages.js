@@ -458,6 +458,11 @@ Blockly.LANG_LISTS_SET_INDEX_TOOLTIP_INSERT_FIRST = 'Gắn chèn vật vào đ�
 Blockly.LANG_LISTS_SET_INDEX_TOOLTIP_INSERT_LAST = 'Gắn thêm vật vào cuối danh sách.';
 Blockly.LANG_LISTS_SET_INDEX_TOOLTIP_INSERT_RANDOM = 'Gắn chèn vật vào danh sách ở vị trí ngẫu nhiên.';
 
+Blockly.LANG_LISTS_SET_ELEMENT_INPUT_IN_LIST = 'Gán';
+Blockly.LANG_LISTS_SET_ELEMENT_SET = '[';
+Blockly.LANG_LISTS_SET_ELEMENT_INPUT_TO = ']=';
+
+
 Blockly.LANG_LISTS_GET_SUBLIST_HELPURL = 'http://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Farsubex.htm';
 Blockly.LANG_LISTS_GET_SUBLIST_INPUT_IN_LIST = 'từ danh sách';
 Blockly.LANG_LISTS_GET_SUBLIST_INPUT_AT1 = 'lấy một danh sách con từ';
