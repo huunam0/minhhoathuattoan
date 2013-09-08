@@ -48,7 +48,7 @@ Blockly.MSG_EXPAND_ALL = 'Expand Blocks';
 Blockly.MSG_CHANGE_VALUE_TITLE = 'Thay giá trị thành:';
 Blockly.MSG_NEW_VARIABLE = 'Biến mới...';
 Blockly.MSG_NEW_VARIABLE_TITLE = 'Tên của biến mới:';
-Blockly.MSG_RENAME_VARIABLE = 'Thay tên biến...';
+Blockly.MSG_RENAME_VARIABLE = 'Đổi tên biến...';
 Blockly.MSG_RENAME_VARIABLE_TITLE = 'Thay tên tất cả "%1" biến này thành:';
 
 // Colour Blocks.
@@ -467,15 +467,15 @@ Blockly.LANG_LISTS_GET_SUBLIST_TOOLTIP = 'Lấy một mảng của danh sách n�
 // Variables Blocks.
 Blockly.LANG_VARIABLES_GET_HELPURL = 'http://en.wikipedia.org/wiki/Variable_(computer_science)';
 Blockly.LANG_VARIABLES_GET_TITLE = null;
-Blockly.LANG_VARIABLES_GET_ITEM = 'biến';
+Blockly.LANG_VARIABLES_GET_ITEM = 'bien';
 Blockly.LANG_VARIABLES_GET_TAIL = null;
 Blockly.LANG_VARIABLES_GET_TOOLTIP = 'Hoàn trả giá trị của.';
 Blockly.LANG_VARIABLES_GET_CREATE_SET = 'Tạo mảnh "đặt vào %1"';
 
 Blockly.LANG_VARIABLES_SET_HELPURL = 'http://en.wikipedia.org/wiki/Variable_(computer_science)';
 Blockly.LANG_VARIABLES_SET_TITLE = 'Gán';
-Blockly.LANG_VARIABLES_SET_ITEM = 'biến';
-Blockly.LANG_VARIABLES_SET_TAIL = null;
+Blockly.LANG_VARIABLES_SET_ITEM = 'bien';
+Blockly.LANG_VARIABLES_SET_TAIL = "=";
 Blockly.LANG_VARIABLES_SET_TOOLTIP = 'Đặt giá trị của biến này thành...';
 Blockly.LANG_VARIABLES_SET_CREATE_GET = 'Tạo mảnh "lấy %1"';
 
@@ -489,7 +489,7 @@ Blockly.LANG_VARIABLES_OUTPUT_VALUE_MSG = 'Giá trị của biến ';
 Blockly.LANG_PROCEDURES_DEFNORETURN_HELPURL = 'http://en.wikipedia.org/wiki/Procedure_%28computer_science%29';
 Blockly.LANG_PROCEDURES_DEFNORETURN_TITLE = '';
 Blockly.LANG_PROCEDURES_DEFNORETURN_PROCEDURE = 'thủ tục';
-Blockly.LANG_PROCEDURES_BEFORE_PARAMS = 'with:';
+Blockly.LANG_PROCEDURES_BEFORE_PARAMS = 'với:';
 Blockly.LANG_PROCEDURES_DEFNORETURN_DO = '';
 Blockly.LANG_PROCEDURES_DEFNORETURN_TOOLTIP = 'Một thủ tục không có giá trị hoàn trả.';
 
