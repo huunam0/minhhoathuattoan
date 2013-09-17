@@ -460,6 +460,28 @@ Blockly.Language.lists_setElement = {
   }
 };
 //END thnam#20130908
+//BEGIN thnam#20130908 Hoan doi 2 phan tu
+Blockly.Language.lists_swap2 = {
+  // Swap  A[i] and A[j] .
+  helpUrl: Blockly.LANG_LISTS_SET_INDEX_HELPURL,
+  init: function() {
+    this.setColour(260);
+    this.appendValueInput('NUM1')
+		.setCheck('Number')
+        .appendTitle(Blockly.LANG_LISTS_SWAP_ELEMENTS);
+    this.appendValueInput('NUM2')
+		.setCheck('Number')
+        .appendTitle(',');
+    this.appendValueInput('LIST')
+        .setCheck('Array')
+        .appendTitle(Blockly.LANG_LISTS_SWAP_OF_LIST);
+    this.setInputsInline(true);
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+    this.setTooltip(Blockly.LANG_LISTS_SWAP_TOOLTIP);
+  }
+};
+//END thnam#20130908
 Blockly.Language.lists_getSublist = {
   // Get sublist.
   helpUrl: Blockly.LANG_LISTS_GET_SUBLIST_HELPURL,
