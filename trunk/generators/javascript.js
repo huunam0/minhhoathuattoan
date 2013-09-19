@@ -176,12 +176,14 @@ Blockly.JavaScript.quote_ = function(string) {
  * @this {Blockly.CodeGenerator}
  * @private
  */
-Blockly.JavaScript.scrub_ = function(block, code) {
+Blockly.JavaScript.scrub_ = function(block, code, order) {
   if (code === null) {
     // Block has handled code generation itself.
     return '';
   }
   var commentCode = '';
+  if (order>1) commentCode += '}//end of step:'+(order-1)+'\nstep'+(order-1)+'();\n\n';
+  if (order>0) commentCode += '//begin step:'+order+'\nfunction step'+order+'(){\n';
   // Only collect comments for blocks that aren't inline.
   if (!block.outputConnection || !block.outputConnection.targetConnection) {
     // Collect comment for this block.
@@ -204,6 +206,7 @@ Blockly.JavaScript.scrub_ = function(block, code) {
     }
   }
   var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
-  var nextCode = this.blockToCode(nextBlock);
-  return commentCode + code + nextCode;
+  var nextCode = this.blockToCode(nextBlock,order>0?order+1:0);
+  //return commentCode + "function step" +order+"(){\n" +code+"}\nstep"+order+"();\n" + nextCode;
+  return commentCode  + code + nextCode;
 };

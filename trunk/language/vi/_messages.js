@@ -91,11 +91,11 @@ Blockly.LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = 'Miễn là điều kiện còn
     'Khi điều kiện đúng thì ngưng.';
 
 Blockly.LANG_CONTROLS_FOR_HELPURL = 'http://en.wikipedia.org/wiki/For_loop';
-Blockly.LANG_CONTROLS_FOR_INPUT_WITH = 'đếm theo';
+Blockly.LANG_CONTROLS_FOR_INPUT_WITH = 'Với mỗi';
 Blockly.LANG_CONTROLS_FOR_INPUT_VAR = 'x';
-Blockly.LANG_CONTROLS_FOR_INPUT_FROM = 'từ';
+Blockly.LANG_CONTROLS_FOR_INPUT_FROM = 'chạy từ';
 Blockly.LANG_CONTROLS_FOR_INPUT_TO = 'đến';
-Blockly.LANG_CONTROLS_FOR_INPUT_BY = 'mỗi lần thêm';
+Blockly.LANG_CONTROLS_FOR_INPUT_BY = ' ';
 Blockly.LANG_CONTROLS_FOR_INPUT_DO = 'thực hiện';
 Blockly.LANG_CONTROLS_FOR_TAIL = '';
 Blockly.LANG_CONTROLS_FOR_TOOLTIP = 'Đếm từ số đầu đến số cuối.\n' +
@@ -351,11 +351,11 @@ Blockly.LANG_TEXT_TRIM_TOOLTIP = 'Hoàn trả bản sao của văn bản sau khi
 
 Blockly.LANG_TEXT_PRINT_HELPURL = 'http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF90CourseNotesnode91.html';
 Blockly.LANG_TEXT_PRINT_TITLE_PRINT = 'Thông báo';
-Blockly.LANG_TEXT_PRINT_TOOLTIP = 'In ra màn hình một văn bản, con số, hay một giá trị đầu vào khác.';
+Blockly.LANG_TEXT_PRINT_TOOLTIP = 'In ra màn hình một văn bản, con số, hay một giá trị khác.';
 
 Blockly.LANG_TEXT_PROMPT_HELPURL = 'http://www.liv.ac.uk/HPC/HTMLF90Course/HTMLF90CourseNotesnode92.html';
-Blockly.LANG_TEXT_PROMPT_TYPE_TEXT = 'Xin người dùng nhập vào văn bản với dòng hướng dẫn';
-Blockly.LANG_TEXT_PROMPT_TYPE_NUMBER = 'Xin người dùng nhập vào con số với dòng hướng dẫn';
+Blockly.LANG_TEXT_PROMPT_TYPE_TEXT = 'Nhập vào văn bản theo yêu cầu';
+Blockly.LANG_TEXT_PROMPT_TYPE_NUMBER = 'Nhập vào con số theo yêu cầu';
 Blockly.LANG_TEXT_PROMPT_TOOLTIP_NUMBER = 'Xin người dùng nhập vào một con số.';
 Blockly.LANG_TEXT_PROMPT_TOOLTIP_TEXT = 'Xin người dùng nhập vào một văn bản.';
 

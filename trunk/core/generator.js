@@ -69,7 +69,8 @@ Blockly.Generator.workspaceToCode = function(name) {
   generator.init();
   var blocks = Blockly.mainWorkspace.getTopBlocks(true);
   for (var x = 0, block; block = blocks[x]; x++) {
-    var line = generator.blockToCode(block);
+	//console.log(block);
+    var line = generator.blockToCode(block,1);
     if (line instanceof Array) {
       // Value blocks return tuples of code and operator order.
       // Top-level blocks don't care about operator order.
@@ -81,7 +82,9 @@ Blockly.Generator.workspaceToCode = function(name) {
         // it wants to append a semicolon, or something.
         line = generator.scrubNakedValue(line);
       }
-      code.push(line);
+      //code.push("//begin block "+x);
+	  code.push(line);
+	  //code.push("//end block "+x);
     }
   }
   code = code.join('\n');  // Blank line between each section.
@@ -144,9 +147,10 @@ Blockly.CodeGenerator = function(name) {
  *     For value blocks, an array containing the generated code and an
  *     operator order value.  Returns '' if block is null.
  */
-Blockly.CodeGenerator.prototype.blockToCode = function(block) {
+Blockly.CodeGenerator.prototype.blockToCode = function(block, order) {
+  if(typeof(order)==='undefined') order = 0;
   if (!block) {
-    return '';
+    return order>1?'}\nstep'+(order-1)+'();\n':'';
   }
   if (block.disabled) {
     // Skip past this block if it is disabled.
@@ -160,11 +164,12 @@ Blockly.CodeGenerator.prototype.blockToCode = function(block) {
         'for block type "' + block.type + '".';
   }
   var code = func.call(block);
+  //console.log(code);
   if (code instanceof Array) {
     // Value blocks return tuples of code and operator order.
-    return [this.scrub_(block, code[0]), code[1]];
+    return [this.scrub_(block, code[0], order), code[1]];
   } else {
-    return this.scrub_(block, code);
+    return this.scrub_(block, code, order);
   }
 };
 

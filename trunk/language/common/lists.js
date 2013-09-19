@@ -346,9 +346,11 @@ Blockly.Language.lists_getElement = {
         .setCheck('Array');
     this.appendValueInput('NUM')
 		.setCheck('Number')
-        .appendTitle('[');
+        .appendTitle(new Blockly.FieldImage(Blockly.pathToBlockly +
+        'media/squarebracket0.png', 12, 24));
     this.appendDummyInput()
-		.appendTitle("]");
+		.appendTitle(new Blockly.FieldImage(Blockly.pathToBlockly +
+        'media/squarebracket1.png', 12, 24));
 	this.setInputsInline(true);
     this.setOutput(true, 'Number');
 	this.setTooltip(Blockly.LANG_LISTS_GET_INDEX_TOOLTIP);
