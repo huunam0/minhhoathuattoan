@@ -150,7 +150,8 @@ Blockly.CodeGenerator = function(name) {
 Blockly.CodeGenerator.prototype.blockToCode = function(block, order) {
   if(typeof(order)==='undefined') order = 0;
   if (!block) {
-    return order>1?'}\nstep'+(order-1)+'();\n':'';
+    //return order>1?'step'+(order-1)+'();\n}\n':'';
+	return order>0?'}\nstep1();\n':'';
   }
   if (block.disabled) {
     // Skip past this block if it is disabled.

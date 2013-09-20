@@ -182,8 +182,10 @@ Blockly.JavaScript.scrub_ = function(block, code, order) {
     return '';
   }
   var commentCode = '';
-  if (order>1) commentCode += '}//end of step:'+(order-1)+'\nstep'+(order-1)+'();\n\n';
-  if (order>0) commentCode += '//begin step:'+order+'\nfunction step'+order+'(){\n';
+  if (order>1) commentCode += 'step'+order+'();\n}\n';
+  //if (block.type!='p_goto') {
+	if (order>0) commentCode += 'function step'+order+'(){\n';
+  //}
   // Only collect comments for blocks that aren't inline.
   if (!block.outputConnection || !block.outputConnection.targetConnection) {
     // Collect comment for this block.
@@ -208,5 +210,6 @@ Blockly.JavaScript.scrub_ = function(block, code, order) {
   var nextBlock = block.nextConnection && block.nextConnection.targetBlock();
   var nextCode = this.blockToCode(nextBlock,order>0?order+1:0);
   //return commentCode + "function step" +order+"(){\n" +code+"}\nstep"+order+"();\n" + nextCode;
+  //return commentCode  + code + (block.type!='p_goto'?nextCode:'');
   return commentCode  + code + nextCode;
 };
