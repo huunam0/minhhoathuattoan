@@ -470,6 +470,8 @@ Blockly.LANG_BEGIN_PROGRAM = 'Bắt đầu';
 Blockly.LANG_BEGIN_PROGRAM_TOOLTIP = 'Vị trí bắt đầu chương trình';
 Blockly.LANG_END_PROGRAM = 'Kết thúc';
 Blockly.LANG_END_PROGRAM_TOOLTIP = 'Kết thúc (thoát) chương trình';
+Blockly.LANG_GOTO_PROGRAM = 'Quay lại bước';
+Blockly.LANG_GOTO_PROGRAM_TOOLTIP = 'Quay lại bước trước';
 
 Blockly.LANG_LISTS_GET_SUBLIST_HELPURL = 'http://publib.boulder.ibm.com/infocenter/lnxpcomp/v8v101/index.jsp?topic=%2Fcom.ibm.xlcpp8l.doc%2Flanguage%2Fref%2Farsubex.htm';
 Blockly.LANG_LISTS_GET_SUBLIST_INPUT_IN_LIST = 'từ danh sách';
