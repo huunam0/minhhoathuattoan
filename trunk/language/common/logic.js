@@ -35,8 +35,7 @@ Blockly.Language.controls_if = {
         .appendTitle(Blockly.LANG_CONTROLS_IF_MSG_THEN);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
-    this.setMutator(new Blockly.Mutator(['controls_if_elseif',
-                                         'controls_if_else']));
+    this.setMutator(new Blockly.Mutator(['controls_if_elseif', 'controls_if_else']));//thnam#disable for test
     // Assign 'this' to a variable for use in the tooltip closure below.
     var thisBlock = this;
     this.setTooltip(function() {
