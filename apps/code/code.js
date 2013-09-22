@@ -20,8 +20,48 @@
 /**
  * @fileoverview JavaScript for Blockly's Code application.
  * @author fraser@google.com (Neil Fraser)
+ * @editor huunam0@gmail.com (Nam Tran)
  */
+//BEGIN thnam#20130922  run by steps
+/*
+var step=1; 
+var stepmode=true;
+var nextstep=false;
+var finishprevious = false;
 
+function runByStep(){
+	if (step>0) {
+		if (finishprevious) {
+			if (!stepmode || nextstep) {
+				finishprevious=false;
+				document.getElementById("content_variable").innerHTML="Goi vong "+step;
+				//setTimeout("step"+step+"()",100);
+				eval("step"+step+"();");
+				nextstep=false;
+				if (!stepmode) gonext();
+			}
+		}
+		//setTimeout(runByStep,500);
+	} else {
+		document.getElementById("content_variable").innerHTML="Ket thuc";
+	}
+}
+function gonext() {
+	step++;
+	nextstep=true;
+	runByStep();
+}
+
+function beginrun() {
+	step=1;
+	finishprevious=true;
+	nextstep=true;
+	runByStep();
+}
+*/
+//END thnam#20130922 run by steps
+ 
+ 
 // Supported languages.
 BlocklyApps.LANGUAGES = {
   // Format: ['Language name', 'direction', 'XX_compressed.js']
@@ -159,7 +199,23 @@ function runJS() {
     alert(BlocklyApps.getMsg('badCode').replace('%1', e));
   }
 }
-
+function runJS2() {
+  Blockly.JavaScript.INFINITE_LOOP_TRAP = '  checkTimeout();\n';
+  var timeouts = 0;
+  var checkTimeout = function() {
+    if (timeouts++ > 1000000) {
+      throw BlocklyApps.getMsg('timeout');
+    }
+  };
+  var code = Blockly.Generator.workspaceToCode('JavaScript');
+  Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
+  try {
+    eval(code);
+	eval("step1();");
+  } catch (e) {
+    alert(BlocklyApps.getMsg('badCode').replace('%1', e));
+  }
+}
 /**
  * Discard all blocks from the workspace.
  */

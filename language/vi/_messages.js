@@ -30,8 +30,8 @@
 
 // Context menus.
 Blockly.MSG_DUPLICATE_BLOCK = 'Tạo Bản Sao';
-Blockly.MSG_REMOVE_COMMENT = 'Xóa Chú Giải';
-Blockly.MSG_ADD_COMMENT = 'Thêm Chú Giải';
+Blockly.MSG_REMOVE_COMMENT = 'Xóa Chú thích';
+Blockly.MSG_ADD_COMMENT = 'Thêm Chú thích';
 Blockly.MSG_EXTERNAL_INPUTS = 'Chỗ Gắn Bên Ngoài';
 Blockly.MSG_INLINE_INPUTS = 'Chỗ Gắn Cùng Dòng';
 Blockly.MSG_DELETE_BLOCK = 'Xóa Mảnh Này';

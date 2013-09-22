@@ -151,7 +151,7 @@ Blockly.CodeGenerator.prototype.blockToCode = function(block, order) {
   if(typeof(order)==='undefined') order = 0;
   if (!block) {
     //return order>1?'step'+(order-1)+'();\n}\n':'';
-	return order>0?'}\nstep1();\n':'';
+	return order>0?'}\n':'';
   }
   if (block.disabled) {
     // Skip past this block if it is disabled.
@@ -165,6 +165,7 @@ Blockly.CodeGenerator.prototype.blockToCode = function(block, order) {
         'for block type "' + block.type + '".';
   }
   var code = func.call(block);
+  //code+="//block_id="+block.id+"\n";
   //console.log(code);
   if (code instanceof Array) {
     // Value blocks return tuples of code and operator order.
