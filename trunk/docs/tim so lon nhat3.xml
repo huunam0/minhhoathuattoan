@@ -1,0 +1,151 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_input_value" x="118" y="-5">
+    <title name="VAR">n</title>
+    <next>
+      <block type="lists_input_n" inline="true">
+        <value name="LIST">
+          <block type="variables_get">
+            <title name="VAR">A</title>
+          </block>
+        </value>
+        <value name="NUM">
+          <block type="variables_get">
+            <title name="VAR">n</title>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" inline="false">
+            <title name="VAR">Max</title>
+            <value name="VALUE">
+              <block type="lists_getElement" inline="true">
+                <value name="LIST">
+                  <block type="variables_get">
+                    <title name="VAR">A</title>
+                  </block>
+                </value>
+                <value name="NUM">
+                  <block type="math_number">
+                    <title name="NUM">1</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" inline="false">
+                <title name="VAR">i</title>
+                <value name="VALUE">
+                  <block type="math_number">
+                    <title name="NUM">2</title>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" inline="false">
+                    <value name="IF0">
+                      <block type="logic_compare" inline="true">
+                        <title name="OP">GT</title>
+                        <value name="A">
+                          <block type="variables_get">
+                            <title name="VAR">i</title>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get">
+                            <title name="VAR">n</title>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_output_value">
+                        <title name="VAR">Max</title>
+                        <next>
+                          <block type="p_end"></block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="controls_if" inline="false">
+                        <value name="IF0">
+                          <block type="logic_compare" inline="true">
+                            <title name="OP">LT</title>
+                            <value name="A">
+                              <block type="variables_get">
+                                <title name="VAR">Max</title>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="lists_getElement" inline="true">
+                                <value name="LIST">
+                                  <block type="variables_get">
+                                    <title name="VAR">A</title>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="variables_get">
+                                    <title name="VAR">i</title>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="variables_set" inline="false">
+                            <title name="VAR">Max</title>
+                            <value name="VALUE">
+                              <block type="lists_getElement" inline="true">
+                                <value name="LIST">
+                                  <block type="variables_get">
+                                    <title name="VAR">A</title>
+                                  </block>
+                                </value>
+                                <value name="NUM">
+                                  <block type="variables_get">
+                                    <title name="VAR">i</title>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="variables_set" inline="false">
+                            <title name="VAR">i</title>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" inline="true">
+                                <title name="OP">ADD</title>
+                                <value name="A">
+                                  <block type="variables_get">
+                                    <title name="VAR">i</title>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number">
+                                    <title name="NUM">1</title>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="p_goto" inline="false">
+                                <value name="NUM">
+                                  <block type="math_number">
+                                    <title name="NUM">5</title>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
