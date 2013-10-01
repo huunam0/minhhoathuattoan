@@ -35,7 +35,7 @@ Blockly.Language.p_end = {
 Blockly.JavaScript.p_end = function() {
   // TODO: Assemble JavaScript into code variable.
   //var code = 'exit;\n';
-  var code = 'step0();\n';
+  var code = 'return;\n';
   return code;
 };
 
