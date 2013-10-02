@@ -86,8 +86,8 @@ Blockly.LANG_CONTROLS_WHILEUNTIL_HELPURL = 'http://code.google.com/p/blockly/wik
 Blockly.LANG_CONTROLS_WHILEUNTIL_OPERATOR_WHILE = 'lặp lại trong\u00A0khi';
 Blockly.LANG_CONTROLS_WHILEUNTIL_OPERATOR_UNTIL = 'lặp lại cho đến\u00A0khi';
 Blockly.LANG_CONTROLS_WHILEUNTIL_INPUT_DO = 'thực hiện';
-Blockly.LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = 'Miễn là điều kiện còn đúng, thì thực hiện các lệnh.';
-Blockly.LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = 'Miễn là điều kiện còn sai, thì thực hiện các lệnh\n' +
+Blockly.LANG_CONTROLS_WHILEUNTIL_TOOLTIP_WHILE = 'Trong khi điều kiện còn đúng, thì thực hiện các lệnh.';
+Blockly.LANG_CONTROLS_WHILEUNTIL_TOOLTIP_UNTIL = 'Trong khi điều kiện còn sai, thì thực hiện các lệnh\n' +
     'Khi điều kiện đúng thì ngưng.';
 
 Blockly.LANG_CONTROLS_FOR_HELPURL = 'http://en.wikipedia.org/wiki/For_loop';
@@ -134,8 +134,8 @@ Blockly.LANG_CONTROLS_IF_TOOLTIP_4 = 'Nếu điều kiện đúng, thực hiện
     'Nếu không điều kiện nào đúng, thực hiện các lệnh cuối cùng.';
 Blockly.LANG_CONTROLS_IF_MSG_IF = 'nếu';
 Blockly.LANG_CONTROLS_IF_MSG_ELSEIF = 'nếu không nếu';
-Blockly.LANG_CONTROLS_IF_MSG_ELSE = 'nếu không';
-Blockly.LANG_CONTROLS_IF_MSG_THEN = 'thực hiện';
+Blockly.LANG_CONTROLS_IF_MSG_ELSE = 'ngược lại thì';
+Blockly.LANG_CONTROLS_IF_MSG_THEN = 'thì';
 Blockly.LANG_CONTROLS_IF_IF_TITLE_IF = 'nếu';
 Blockly.LANG_CONTROLS_IF_IF_TOOLTIP = 'Thêm, bỏ, hoặc đổi thứ tự các mảnh con\n' +
     'để tạo cấu trúc mới cho mảnh nếu.';
@@ -359,6 +359,8 @@ Blockly.LANG_TEXT_PROMPT_TYPE_NUMBER = 'Nhập vào con số theo yêu cầu';
 Blockly.LANG_TEXT_PROMPT_TOOLTIP_NUMBER = 'Xin người dùng nhập vào một con số.';
 Blockly.LANG_TEXT_PROMPT_TOOLTIP_TEXT = 'Xin người dùng nhập vào một văn bản.';
 
+Blockly.LANG_TEXT_OUT_VARIABLE = 'Thông báo';
+Blockly.LANG_TEXT_OUT_VARIABLE_TOOLTIP_TEXT = 'Xuất giá trị biến cùng dòng giải thích';
 // Lists Blocks.
 Blockly.LANG_LISTS_CREATE_EMPTY_HELPURL = 'http://en.wikipedia.org/wiki/Linked_list#Empty_lists';
 Blockly.LANG_LISTS_CREATE_EMPTY_TITLE = 'tạo danh sách trống';

@@ -29,11 +29,7 @@ Blockly.Language.text = {
   init: function() {
     this.setColour(160);
     this.appendDummyInput()
-        .appendTitle(new Blockly.FieldImage(Blockly.pathToBlockly +
-        'media/quote0.png', 12, 12))
         .appendTitle(new Blockly.FieldTextInput(''), 'TEXT')
-        .appendTitle(new Blockly.FieldImage(Blockly.pathToBlockly +
-        'media/quote1.png', 12, 12));
     this.setOutput(true, 'String');
     this.setTooltip(Blockly.LANG_TEXT_TEXT_TOOLTIP);
   }
@@ -457,3 +453,25 @@ Blockly.Language.text_prompt = {
 Blockly.Language.text_prompt.TYPES =
     [[Blockly.LANG_TEXT_PROMPT_TYPE_TEXT, 'TEXT'],
      [Blockly.LANG_TEXT_PROMPT_TYPE_NUMBER, 'NUMBER']];
+
+Blockly.Language.text_prompt_variable = {
+  // Alert a text + variable.
+  helpUrl: Blockly.LANG_TEXT_PROMPT_HELPURL,
+  init: function() {
+    // Assign 'this' to a variable for use in the closure below.
+    var thisBlock = this;
+    this.setColour(160);
+    this.appendDummyInput()
+		.appendTitle(Blockly.LANG_TEXT_OUT_VARIABLE)
+        .appendTitle(new Blockly.FieldImage(Blockly.pathToBlockly +
+        'media/quote0.png', 12, 12))
+        .appendTitle(new Blockly.FieldTextInput(''), 'TEXT')
+        .appendTitle(new Blockly.FieldImage(Blockly.pathToBlockly +
+        'media/quote1.png', 12, 12))
+		.appendTitle(new Blockly.FieldVariable(Blockly.LANG_VARIABLES_SET_ITEM), 'VAR');
+    // Assign 'this' to a variable for use in the tooltip closure below.
+    this.setPreviousStatement(true);
+    this.setNextStatement(true);
+	this.setTooltip(Blockly.LANG_TEXT_OUT_VARIABLE_TOOLTIP_TEXT);
+  }
+};

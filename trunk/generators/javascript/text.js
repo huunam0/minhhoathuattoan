@@ -259,3 +259,11 @@ Blockly.JavaScript.text_prompt = function() {
   }
   return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
 };
+Blockly.JavaScript.text_prompt_variable = function() {
+  // Alert text + variable.
+  var msg = Blockly.JavaScript.quote_(this.getTitleValue('TEXT'));
+  var varName = Blockly.JavaScript.variableDB_.getName(
+      this.getTitleValue('VAR'), Blockly.Variables.NAME_TYPE);
+  var code = 'window.alert(' + msg +'+" "+'+ varName +')';
+  return code;
+};
