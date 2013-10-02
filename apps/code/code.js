@@ -22,54 +22,16 @@
  * @author fraser@google.com (Neil Fraser)
  * @editor huunam0@gmail.com (Nam Tran)
  */
-//BEGIN thnam#20130922  run by steps
-/*
-var step=1; 
-var stepmode=true;
-var nextstep=false;
-var finishprevious = false;
 
-function runByStep(){
-	if (step>0) {
-		if (finishprevious) {
-			if (!stepmode || nextstep) {
-				finishprevious=false;
-				document.getElementById("content_variable").innerHTML="Goi vong "+step;
-				//setTimeout("step"+step+"()",100);
-				eval("step"+step+"();");
-				nextstep=false;
-				if (!stepmode) gonext();
-			}
-		}
-		//setTimeout(runByStep,500);
-	} else {
-		document.getElementById("content_variable").innerHTML="Ket thuc";
-	}
-}
-function gonext() {
-	step++;
-	nextstep=true;
-	runByStep();
-}
-
-function beginrun() {
-	step=1;
-	finishprevious=true;
-	nextstep=true;
-	runByStep();
-}
-*/
-//END thnam#20130922 run by steps
  
  
 // Supported languages.
 BlocklyApps.LANGUAGES = {
   // Format: ['Language name', 'direction', 'XX_compressed.js']
   en: ['English', 'ltr', 'en_compressed.js'],
-  de: ['Deutsch', 'ltr', 'de_compressed.js'],
-  hu: ['Magyar', 'ltr', 'en_compressed.js'],
-  vi: ['Tiếng Việt', 'ltr', 'vi_compressed.js'],
-  'zh-tw': ['中國的', 'ltr', 'zh_tw_compressed.js']
+  //de: ['Deutsch', 'ltr', 'de_compressed.js'],
+  hu: ['Pascal', 'ltr', 'pas_compressed.js'],
+  vi: ['Tiếng Việt', 'ltr', 'vi_compressed.js']
 };
 BlocklyApps.LANG = BlocklyApps.getLang();
 

@@ -127,8 +127,6 @@ Blockly.Language.variables_output_value = {
         .appendTitle(Blockly.LANG_VARIABLES_OUTPUT_VALUE_TITLE)
         .appendTitle(new Blockly.FieldVariable(
         Blockly.LANG_VARIABLES_SET_ITEM), 'VAR');
-        //.appendTitle(Blockly.LANG_VARIABLES_SET_TAIL)
-	//this.setOutput(true);
     this.setPreviousStatement(true);
     this.setNextStatement(true);
     this.setTooltip(Blockly.LANG_VARIABLES_OUTPUT_VALUE_TOOLTIP);
